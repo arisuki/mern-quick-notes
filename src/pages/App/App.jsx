@@ -8,7 +8,6 @@ import {getUser} from "../../utilities/users-service"
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  console.log("this is user in App", user)
 
   return (
     <main className="App">
@@ -18,6 +17,7 @@ export default function App() {
           <NavBar user = {user} setUser={setUser}/>
         <Routes>
           <Route path = "/notes" element={<Notes/>}/>
+          <Route path = "/" element={<Notes/>}/>
         </Routes>
         </>
 
